@@ -1,0 +1,68 @@
+glimpse (4.18.7-1) unstable; urgency=low
+
+  * New upstream release, now under a DFSG-compatible license
+    (closes: #803015)
+    ftp-master (rightly) rejected the previous upload because of
+		leftover license text in some files, but upstream has in the
+		meantime suitably updated the official source on github.
+  * New maintainer
+  * lifted standards version, reworked build scripts accordingly
+
+ -- Alexander Zangerl <az@debian.org>  Wed, 26 Oct 2016 19:39:34 +1000
+
+glimpse (4.18.5-1) unstable; urgency=low
+
+  * New upstream release
+  * New maintainer. Closes: #361710
+  * Update policy to version 3.7.2.1 No changes were necessary.
+  * Update config.guess, config.sub from autotools-dev version 20060702.1
+
+ -- W.A. van der Meeren <danny@illogic.nl>  Mon,  2 Oct 2006 18:40:15 +0200
+
+glimpse (4.18.0-6.1) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Link against -lfl_pic instead of -lfl; fixes FTBFS on several
+    architectures (among them amd64) with gcc 4.1. (Closes: #384961)
+  * Build-depend on flex (>= 2.5.33-6) to get -lfl_pic.
+
+ -- Steinar H. Gunderson <sesse@debian.org>  Fri,  8 Sep 2006 01:55:29 +0200
+
+glimpse (4.18.0-6) unstable; urgency=low
+
+  * Fix typos in the manual pages. Closes: #335339, #335341.
+  * Update policy to version 3.6.2.1. No changes were necessary.
+
+ -- Shaun Jackman <sjackman@debian.org>  Mon, 24 Oct 2005 10:04:53 -0600
+
+glimpse (4.18.0-5) unstable; urgency=low
+
+  * Change the upstrem author to Golda Velez <gvelez@webglimpse.org>.
+  * Following a conversation with Golda Velez, update the license to give
+    Debian permission to distribute modified binaries. Closes: #308667.
+
+ -- Shaun Jackman <sjackman@debian.org>  Mon,  4 Jul 2005 10:57:32 -0700
+
+glimpse (4.18.0-4) unstable; urgency=low
+
+  * Fix build on amd64 using gcc-4.0 (closes: #296998). 
+
+ -- Shaun Jackman <sjackman@debian.org>  Mon,  9 May 2005 17:54:27 -0700
+
+glimpse (4.18.0-3) unstable; urgency=low
+
+  * Use stdarg.h instead of varargs.h (closes: #278156).
+
+ -- Shaun Jackman <sjackman@debian.org>  Mon, 15 Nov 2004 16:51:56 -0800
+
+glimpse (4.18.0-2) unstable; urgency=low
+
+  * Add flex to Build-Depends (closes: #278787).
+
+ -- Shaun Jackman <sjackman@debian.org>  Fri, 29 Oct 2004 11:09:34 -0700
+
+glimpse (4.18.0-1) unstable; urgency=low
+
+  * Initial release.
+
+ -- Shaun Jackman <sjackman@debian.org>  Mon, 18 Oct 2004 14:36:48 -0700

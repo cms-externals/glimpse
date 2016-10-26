@@ -1,0 +1,27 @@
+This package was first debianized by Shaun Jackman <sjackman@debian.org> in
+2004, maintained by W.A. van der Meeren <danny@illogic.nl> in 2006 and
+is maintained by Alexander Zangerl <az@debian.org> since Oct 2015.
+
+It was downloaded from https://github.com/gvelez17/glimpse
+
+Upstream Author: Golda Velez <gvelez@webglimpse.net>
+
+Copyright:
+
+Copyright 1996, Arizona Board of Regents on behalf of The University
+of Arizona.
+
+Permission to use, copy, modify, and/or distribute this software for
+any purpose with or without fee is hereby granted, provided that the
+above copyright notice and this permission notice appear in all
+copies.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL
+WARRANTIES WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE
+AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL
+DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR
+PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER
+TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+PERFORMANCE OF THIS SOFTWARE.
+

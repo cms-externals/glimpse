@@ -1,0 +1,21 @@
+Source: glimpse
+Section: text
+Priority: optional
+Maintainer: Alexander Zangerl <az@debian.org>
+Build-Depends: flex, debhelper (>= 8)
+Standards-Version: 3.9.8
+Vcs-Git: git://github.com/az143/glimpse.git -b master
+Vcs-Browser: https://github.com/az143/glimpse
+
+
+Package: glimpse
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Conflicts: agrep
+Description: search quickly through entire file systems
+ Glimpse, which stands for GLobal IMPlicit SEarch, is a very popular
+ UNIX indexing and query system that allows you to search through a
+ large set of files very quickly. Glimpse supports most of agrep's
+ options (agrep is our powerful version of grep) including approximate
+ matching (e.g., finding misspelled words), Boolean queries, and even
+ some limited forms of regular expressions.
