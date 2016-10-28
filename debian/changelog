@@ -1,7 +1,13 @@
+glimpse (4.18.7-2) unstable; urgency=medium
+
+  * fixed copyright file to mention gpl v2+ for libtemplate/include/gdbm.h,
+    (which isn't actually used) and new upload (closes: #803015)
+
+ -- Alexander Zangerl <az@debian.org>  Fri, 28 Oct 2016 18:18:06 +1000
+
 glimpse (4.18.7-1) unstable; urgency=low
 
   * New upstream release, now under a DFSG-compatible license
-    (closes: #803015)
     ftp-master (rightly) rejected the previous upload because of
 		leftover license text in some files, but upstream has in the
 		meantime suitably updated the official source on github.
