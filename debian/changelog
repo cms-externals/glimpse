@@ -1,3 +1,12 @@
+glimpse (4.18.7-4) unstable; urgency=medium
+
+  * applied patch by helmut grohne to handle cross compilation better
+    Let dh_auto_configure pass cross tools to make,
+  	and Propagate CC from configure to make. (closes: #929043)
+  * lifted debhelper compat level
+
+ -- Alexander Zangerl <az@debian.org>  Thu, 23 May 2019 09:27:31 +0200
+
 glimpse (4.18.7-3) unstable; urgency=high
 
   * updated control to build-depend on libfl-dev, (closes: #848012)

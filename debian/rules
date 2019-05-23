@@ -22,7 +22,7 @@ build-indep:
 
 build-stamp:
 	dh_testdir
-	CFLAGS="$(CFLAGS)" CPPFLAGS="$(CPPFLAGS)" LDFLAGS="$(LDFLAGS)" INSTALL_OPTS="$(INSTALL_OPTS)" ./configure --prefix=/usr --mandir='$${prefix}/share/man'
+	CFLAGS="$(CFLAGS)" CPPFLAGS="$(CPPFLAGS)" LDFLAGS="$(LDFLAGS)" INSTALL_OPTS="$(INSTALL_OPTS)" dh_auto_configure
 	$(MAKE)
 	touch $@
 
