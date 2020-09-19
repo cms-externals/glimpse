@@ -1,66 +1,28 @@
 #!/usr/bin/make -f
 
-TARGETDIR=$(shell pwd)/debian/glimpse
+export DEB_BUILD_MAINT_OPTIONS = hardening=+all
 
-CPPFLAGS:=$(shell dpkg-buildflags --get CPPFLAGS)
-CFLAGS:=$(shell dpkg-buildflags --get CFLAGS)
-LDFLAGS:=$(shell dpkg-buildflags --get LDFLAGS)
+TARGETDIR=`pwd`/debian/glimpse
 
-ifneq (,$(findstring noopt,$(DEB_BUILD_OPTIONS)))
-CFLAGS += -O0
-else
-CFLAGS += -O2
-endif
+override_dh_auto_configure:
+	autoconf
+	dh_auto_configure
 
-ifeq (,$(findstring nostrip,$(DEB_BUILD_OPTIONS)))
-     INSTALL_OPTS += -s
-endif
+override_dh_auto_build:
+# 	These are the only variables that are free for user
+	$(MAKE) DEBUGFLAGS="$(CFLAGS) $(CPPFLAGS)" OTHERLIBS="$(LDFLAGS)"
 
-build-arch: build
-build: build-stamp
-build-indep:
-
-build-stamp:
-	dh_testdir
-	CFLAGS="$(CFLAGS)" CPPFLAGS="$(CPPFLAGS)" LDFLAGS="$(LDFLAGS)" INSTALL_OPTS="$(INSTALL_OPTS)" dh_auto_configure
-	$(MAKE)
-	touch $@
-
-install: build
-	dh_prep
+override_dh_auto_install:
 	$(MAKE) install prefix=$(TARGETDIR)/usr
-	# move the internal, optional and undocumented programs into /usr/lib/glimpse
+# 	move the internal, optional and undocumented programs into /usr/lib/glimpse
 	install -g root -o root -m 0755 -d $(TARGETDIR)/usr/lib/glimpse
 	mv $(TARGETDIR)/usr/bin/buildcast $(TARGETDIR)/usr/bin/cast $(TARGETDIR)/usr/bin/uncast \
-	$(TARGETDIR)/usr/bin/tbuild $(TARGETDIR)/usr/bin/wgconvert $(TARGETDIR)/usr/lib/glimpse
+	   $(TARGETDIR)/usr/bin/tbuild $(TARGETDIR)/usr/bin/wgconvert $(TARGETDIR)/usr/lib/glimpse
 
+#	install (and rename) agrep README:
+	install -g root -o root -m 0755 -d $(TARGETDIR)/usr/share/doc/glimpse
+	install -g root -o root -m 0644 agrep/README \
+		$(TARGETDIR)/usr/share/doc/glimpse/README.agrep
 
-clean:
-	dh_testdir
-	dh_testroot
-	rm -f build-stamp
-	[ ! -f Makefile ] || $(MAKE) distclean
-	dh_clean
-
-
-binary-indep: build install
-binary: binary-arch
-
-binary-arch: build install
-	dh_testdir
-	dh_testroot
-	dh_installdocs
-	dh_installexamples
-	dh_installchangelogs ChangeLog
-	dh_link
-	dh_strip
-	dh_compress
-	dh_fixperms
-	dh_installdeb
-	dh_shlibdeps
-	dh_gencontrol
-	dh_md5sums
-	dh_builddeb
-
-
-.PHONY: configure build clean install binary binary-arch binary-indep
+%:
+	dh $@ --without autoreconf

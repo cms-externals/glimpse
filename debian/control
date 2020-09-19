@@ -2,8 +2,8 @@ Source: glimpse
 Section: text
 Priority: optional
 Maintainer: Alexander Zangerl <az@debian.org>
-Build-Depends: flex, libfl-dev, debhelper (>= 9)
-Standards-Version: 3.9.8
+Build-Depends: flex, libfl-dev, debhelper (>= 12)
+Standards-Version: 4.3.0
 Vcs-Git: https://github.com/az143/glimpse.git -b master
 Vcs-Browser: https://github.com/az143/glimpse
 
@@ -11,6 +11,8 @@ Vcs-Browser: https://github.com/az143/glimpse
 Package: glimpse
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
+Provides: agrep
+Replaces: agrep
 Conflicts: agrep
 Description: search quickly through entire file systems
  Glimpse, which stands for GLobal IMPlicit SEarch, is a very popular

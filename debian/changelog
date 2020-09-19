@@ -1,3 +1,13 @@
+glimpse (4.18.7-6) unstable; urgency=medium
+
+  * glimpse now provides agrep.
+  * patches from the standalone agrep package were merged in
+  * updates standards version and debhelper setup
+  * thanks go to Roland Rosenfeld <roland@debian.org> who
+    did the package consolidation work.
+
+ -- Alexander Zangerl <az@debian.org>  Sat, 19 Sep 2020 20:45:54 +1000
+
 glimpse (4.18.7-5) unstable; urgency=medium
 
   * minor adjustments to control and changelog
