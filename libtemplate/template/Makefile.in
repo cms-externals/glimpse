@@ -25,7 +25,7 @@ LN_S		= @LN_S@
 DEBUG		= $(DEBUG_TOP) #-O #-g #-DDEBUG
 DEBUG_LIBS	=
 
-CFLAGS		= $(DEBUG) -I../include
+CFLAGS		= $(DEBUG) -I../include @CFLAGS@
 OBJS		= template.o
 LIBDIR		= ../lib
 LDFLAGS         = -L$(LIBDIR)

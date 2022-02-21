@@ -1,5 +1,5 @@
 # Set this variable to the name of your C compiler
-CC=gcc
+CC=@CC@
 
 # Provide optimization flages here. These settings are fine for egcs and
 # gcc >= 2.95. If you use an older gcc version, change -O3 to -O2. If you
@@ -9,7 +9,7 @@ CFLAGS=-O3 -fomit-frame-pointer
 
 # Additional definitions you would like to pass to the compiler. You usually
 # can leave this line alone.
-DEFS=
+DEFS=@CFLAGS@
 
 # The name of the linker. Usually, specifying the same name as the C compiler
 # is fine. Change this to "ld" if in doubt.

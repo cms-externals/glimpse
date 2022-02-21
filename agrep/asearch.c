@@ -254,7 +254,6 @@ Nextchar1file:
 					{ 
 						if(FILENAMEONLY && (NEW_FILE || !POST_FILTER)) {
 							num_of_matched++;
-							free_buf(text, buffer);
 
 							if (agrep_finalfp != NULL)
 								fprintf(agrep_finalfp, "%s", CurrentFileName);

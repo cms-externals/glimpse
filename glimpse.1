@@ -1,6 +1,6 @@
-.TH GLIMPSE l "November 10, 1997"
+.TH GLIMPSE 1 "November 10, 1997"
 .SH NAME
-\fIglimpse 4.1\fP - search quickly through entire file systems
+glimpse \- search quickly through entire file systems
 .SH OVERVIEW
 \fIGlimpse\fP (which stands for GLobal IMPlicit SEarch)
 is a very popular UNIX indexing and query system that allows
@@ -433,7 +433,7 @@ If the file name is a directory name, the \-r option will search
 .B \-R \fIk\fP
 defines the maximum size (in bytes) of a record.
 The maximum value (which is the default) is 48K.
-Defining the maximum to be lower than the deafult may speed
+Defining the maximum to be lower than the default may speed
 up some searches.
 .TP
 .B \-s
@@ -897,7 +897,7 @@ and '*' (the Kleene closure).
 So, "glimpse ab.de" will match abcde, but "glimpse ab\\.de"
 will not, and "glimpse ab*de" will not match ab*de, but
 "glimpse ab\\*de" will.
-The meta character - is translated automatically to a hypen
+The meta character - is translated automatically to a hyphen
 unless it appears between [] (in which case it denotes a range of
 characters).
 .LP

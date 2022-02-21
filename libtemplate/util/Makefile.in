@@ -17,7 +17,7 @@ INSTALL		= @INSTALL@
 INSTALL_BIN 	= @INSTALL_PROGRAM@
 INSTALL_FILE 	= @INSTALL_DATA@
 RANLIB		= @RANLIB@
-DEFS            =
+DEFS            = @CFLAGS@
 
 DEBUG           =
 INCLUDE         = -I../include
